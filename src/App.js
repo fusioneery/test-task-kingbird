@@ -1,26 +1,26 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import { Router, Route, Switch } from "react-router-dom";
+import history from "./history";
+import "./styles/reset.sass";
+import "./styles/main.sass";
+
+import ErrorBoundary from "./components/ErrorBoundary/ErrorBoundary";
+import ErrorPage from "./pages/Error/ErrorContainer";
+import { NotFoundPresentational } from "./pages/NotFound/NotFoundPresentational";
+import Index from "./pages/Index/IndexContainer";
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <Router history={history}>
+        <ErrorBoundary>
+          <Switch>
+            <Route exact path="/" component={Index} />
+            <Route path="/error" component={ErrorPage} />
+            <Route component={NotFoundPresentational} />
+          </Switch>
+        </ErrorBoundary>
+      </Router>
     );
   }
 }
