@@ -1,8 +1,9 @@
 import React, { Component } from "react";
+import { IndexPresentational } from "./IndexPresentational";
 
 class IndexContainer extends Component {
   render() {
-    return <div />;
+    return <IndexPresentational />;
   }
 }
 

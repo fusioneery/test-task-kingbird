@@ -1,11 +1,8 @@
 // Small tablets and large smartphones (landscape view)
-$screen-sm-max: 576px;
+$screen-sm-max: 768px;
 
 // Tablets and small desktops
-$screen-lg-min: 992px;
-
-// Large tablets and desktops
-$screen-xl-min: 1200px;
+$screen-lg-min: 1440px;
 
 // Small devices
 =sm 
@@ -17,14 +14,7 @@ $screen-xl-min: 1200px;
    @media (min-width: #{$screen-sm-max}) and (max-width: #{$screen-lg-min})
        @content
 
-
-// Large devices
-=lg 
-   @media (min-width: #{$screen-lg-min}) and (max-width: #{$screen-xl-min})
-       @content
-   
-
 // Extra large devices
-=xl 
-   @media (min-width: #{$screen-xl-min}) 
+=lg 
+   @media (min-width: #{$screen-lg-min}) 
        @content

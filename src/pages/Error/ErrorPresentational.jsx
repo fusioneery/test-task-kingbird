@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "../../styles/main.sass";
+import "./style.sass";
 
 export const ErrorPresentational = ({ desc }) => {
   return (

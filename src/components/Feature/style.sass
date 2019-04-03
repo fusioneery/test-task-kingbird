@@ -1,0 +1,29 @@
+@import '../../styles/media.sass'
+@import '../../styles/vars.sass'
+.feature
+    +sm()
+        margin: 20px
+        &:first-of-type
+            margin-top: 0
+    &__name
+        opacity: 0.5
+        font-family: Georgia
+        font-size: 14px
+        font-style: italic
+        letter-spacing: 1.1px
+        display: block
+    &__value
+        margin-top: 10px
+        font-size: 60px
+        +sm()
+            font-size: 40px
+        font-weight: 200
+        letter-spacing: 4.6px
+        display: block
+        position: relative
+.value
+    &__accent
+        color: $accent
+    &__leftside
+        position: absolute
+        left: -38px

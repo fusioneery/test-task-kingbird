@@ -1,0 +1,15 @@
+@import '../../styles/media.sass'
+.mars-img
+    max-width: 100%
+    width: auto
+    display: block
+    margin: 0 auto
+    height: 250px
+    +md()
+        height: 450px
+        object-position: 13%
+    +sm()
+        height: 250px
+    object-fit: cover
+    object-position: 18%
+    mix-blend-mode: luminosity
