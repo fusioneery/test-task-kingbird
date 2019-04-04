@@ -10,7 +10,6 @@ class GalleryContainer extends Component {
   }
 
   viewImage = index => {
-    console.log(index);
     this.setState({ modalImgIndex: index });
   };
 
