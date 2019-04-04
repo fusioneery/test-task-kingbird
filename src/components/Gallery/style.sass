@@ -1,0 +1,16 @@
+@import '../../styles/media.sass'
+.gallery
+    width: 100%
+    +lg()
+        width: 1140px
+    margin: 0 auto
+
+.slides
+    overflow-x: scroll
+    overflow-y: hidden
+    scroll-snap-type: x mandatory
+    scroll-padding: 50%
+    display: flex
+    scrollbar-width: none
+    &::-webkit-scrollbar  
+        display: none

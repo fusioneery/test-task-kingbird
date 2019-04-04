@@ -6,8 +6,9 @@ import Title from "../../components/Title/TitlePresentational";
 import Features from "../../components/Features/FeaturesPresentational";
 import ArticleHeading from "../../components/ArticleHeading/ArticleHeadingPresentational";
 import ArticleText from "../../components/ArticleText/ArticleTextPresentational";
+import Gallery from "../../components/Gallery/GalleryContainer";
 
-export const IndexPresentational = () => {
+export const IndexPresentational = ({ images }) => {
   return (
     <main className="main">
       <MarsImg />
@@ -26,6 +27,7 @@ export const IndexPresentational = () => {
           planet's "habitability."
         </ArticleText>
       </Section>
+      <Gallery imgs={images} />
       <Section textSection>
         <ArticleHeading small>
           Mars Science Laboratory will study Mars' habitability

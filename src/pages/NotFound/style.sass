@@ -1,20 +1,21 @@
+@import '../../styles/vars.sass'
 .not-found
+    background: black
+    color: white
     display: flex
     justify-content: center
     align-items: center
-    width: 100vw
-    height: 100vh
+    width: calc(100vw - 40px)
+    height: calc(100vh - 40px)
+    padding: 20px
     flex-direction: column
-    &__img
-        height: auto
-        max-width: 320px
-        width: auto
+    text-align: center
     &__text
         margin-top: 45px
         font-size: 32px
-        text-align: center
     &__link
+        cursor: pointer
         margin-top: 20px
-        color: #a45bcc
+        color: $accent
         font-size: 22px
         text-decoration: underline

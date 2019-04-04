@@ -1,0 +1,41 @@
+@import '../../styles/media.sass'
+.slide
+    scroll-snap-align: center
+    position: relative
+    cursor: zoom-in
+    +sm()
+        margin-left: 10px
+    +md()
+        margin-left: 15px
+    &:before
+        transition: opacity .2s ease-in-out
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        content: '+'
+        font-size: 25px
+        font-weight: 200
+        color: white
+        background: rgba(0,0,0,.6)
+        display: flex
+        justify-content: center
+        align-items: center
+        opacity: 0
+    &:hover
+        &:before
+            opacity: 1
+    +lg()
+        &:not(:first-of-type)
+            margin-left: 30px
+    &__img
+        object-fit: cover
+        height: 350px
+        width: 350px
+        +sm()
+            height: 220px
+            width: 220px
+        +md()
+            height: 300px
+            width: 300px
