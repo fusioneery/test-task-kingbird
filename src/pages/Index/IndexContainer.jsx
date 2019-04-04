@@ -13,26 +13,24 @@ class IndexContainer extends Component {
   }
 
   componentDidMount = () => {
-    console.log(this.props.location.state);
-    // if (!this.props.location.state) {
-    axios
-      .get(API_ENDPOINT)
-      .then(data => {
-        console.log(data.data);
-        this.setState({
-          images: data.data.photos.map(photo => photo.img_src),
-        });
-      })
-      .catch(err => {
-        console.log(err);
-        let reason =
-          err.response.status === 429
-            ? "is tired of giving images."
-            : "experiencing some problems :(";
+    if (!this.props.location.state) {
+      axios
+        .get(API_ENDPOINT)
+        .then(data => {
+          this.setState({
+            images: data.data.photos.map(photo => photo.img_src),
+          });
+        })
+        .catch(err => {
+          console.log(err);
+          let reason =
+            err.response.status === 429
+              ? "is tired of giving images."
+              : "experiencing some problems :(";
 
-        history.push("/error", "NASA API " + reason);
-      });
-    // }
+          history.push("/error", "NASA API " + reason);
+        });
+    }
   };
 
   render() {
